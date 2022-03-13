@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+
 
 /**
  * main - Determines either greater than 5, is less than 6, or is 0
@@ -16,15 +16,15 @@ int main(void)
 	
 	if (n > 5)
 	{
-		printf("Last digit of %d is greater than 5\n",n);
+		printf("Last digit of %d is greater than 5",n);
 	}
 	else if (n == 0)
 	{
-		printf("Last digit of %d is 0\n",n);
+		printf("Last digit of %d is 0",n);
 	}
 	else
 	{
-		printf("Last digit of %d is less than 6 and not 0\n",n);
+		printf("Last digit of %d is less than 6 and not 0",n);
 	}
 	return (0);
 }
