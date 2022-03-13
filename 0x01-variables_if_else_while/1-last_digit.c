@@ -1,19 +1,30 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet.
+ * main - Determines either greater than 5, is less than 6, or is 0
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	int n;
 
-	for (i = 0; i < 26; i++)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	
+	if (n > 5)
 	{
-		putchar(alp[i]);
+		printf("Last digit of %d is greater than 5\n",n);
 	}
-	putchar('\n');
+	else if (n == 0)
+	{
+		printf("Last digit of %d is 0\n",n);
+	}
+	else
+	{
+		printf("Last digit of %d is less than 6 and not 0\n",n);
+	}
 	return (0);
 }
